@@ -4,6 +4,11 @@ Flow Inspector
 Flow Inpsector is an application based on web technologies to
 visualize network flows (Netflow, IPFIX).
 
+<img src="http://webholics.github.com/flow-inspector/images/screenshot1.png" alt="Dashboard screenshot" width="200" />
+<img src="http://webholics.github.com/flow-inspector/images/screenshot2.png" alt="Node-Flow-Graph screenshot" width="200" />
+<img src="http://webholics.github.com/flow-inspector/images/screenshot3.png" alt="Hierarchical edge bundles screenshot" width="200" />
+<img src="http://webholics.github.com/flow-inspector/images/screenshot4.png" alt="Hive Plot screenshot" width="200" />
+
 Requirements
 ---------------
 
