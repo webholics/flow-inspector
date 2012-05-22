@@ -1,0 +1,460 @@
+/*
+    Document   : screen.css
+    Author     : Mario Volke
+    Description:
+        Screen styles for Flow Inpsector
+*/
+
+/* General */
+
+body {
+	background: #222 url(../../images/back.png);
+	padding-top: 40px;
+}
+
+/* Colors */
+
+.dark,
+.dark label {
+	color: #bfbfbf;
+}
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+	color: #fff;
+}
+.dark .well {
+	background-color: rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Topbar */
+
+.topbar {
+	color: #bfbfbf;
+}
+.topbar h3 a, .topbar .brand, .topbar ul a {
+	-webkit-transition-property: background-color, color;
+	-webkit-transition-duration: 0.2s;
+	-webkit-transition-timing-function: ease-in-out;
+}
+
+/* Alerts */
+
+.alerts {
+	position: absolute;
+	top: 50px;
+	left: 50%;
+	margin-left: -250px;
+	width: 500px;
+	padding-left: 120px;
+	z-index: 10000;
+}
+.alert-message {
+	margin-bottom: 5px;
+}
+
+/* Containers */
+
+.container .content {
+	background-color: #fff;
+	border-radius: 0 0 6px 6px;
+	box-shadow: 0 1px 2px rgba(0,0,0,.3);
+	padding: 20px;
+	margin: 0 -20px;
+}
+.container .page-header {
+	background-color: #f5f5f5;
+    padding: 20px 20px 10px;
+	margin: -20px -20px 20px;
+}
+.container > footer {
+	border: none;
+	margin-top: 0;
+}
+.container > footer p {
+	text-align: center;
+	color: #bfbfbf;
+}
+.container-fixed {
+	position: absolute;
+	top: 40px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.container-fixed > aside {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	bottom: 10px;
+	width: 180px;
+	margin-bottom: 0;
+	outline: none;
+}
+.container-fixed > aside .form-stacked {
+	padding-left: 0;
+}
+.container-fixed > aside .btn {
+	width: 150px;
+}
+.container-fixed > aside select {
+	width: 180px;
+}
+.container-fixed > aside textarea,
+.container-fixed > aside input {
+	width: 170px;
+}
+.container-fixed > footer {
+	position: absolute;
+	left: 240px;
+	bottom: 10px;
+	height: 90px;
+	right: 10px;
+	margin: 0;
+	padding: 5px;
+}
+.container-fixed > .content {
+	position: absolute;
+	left: 240px;
+	right: 10px;
+	top: 10px;
+	bottom: 120px;
+	overflow: auto;
+	outline: none;
+}
+.container-fixed > .content > .scroll {
+	height: 100%;
+	width: 100%;
+	outline: none;
+}
+
+/* Scrollbar */
+
+.iscroll-scrollbarV {
+	position:absolute;
+	z-index:100;
+	width:8px;bottom:7px;top:2px;right:1px
+}
+.iscroll-scrollbarV > div {
+	position:absolute;
+	z-index:100;
+	width:100%;
+
+	/* The following is probably what you want to customize */
+	background: rgba(0, 0, 0, 0.3);
+	-webkit-background-clip:padding-box;
+	-webkit-box-sizing:border-box;
+	-webkit-border-radius:4px;
+}
+.iscroll-scrollbarH {
+	position:absolute;
+	z-index:100;
+	height:8px;bottom:1px;right:7px;left:2px
+}
+.iscroll-scrollbarH > div {
+	position:absolute;
+	z-index:100;
+	height:100%;
+
+	/* The following is probably what you want to customize */
+	background: rgba(0, 0, 0, 0.3);
+	-webkit-background-clip:padding-box;
+	-webkit-box-sizing:border-box;
+	-webkit-border-radius:4px;
+}
+.jspVerticalBar {
+	width: 0;
+	background: none;
+	-webkit-transition-property: width;
+	-webkit-transition-duration: 0.2s;
+	-webkit-transition-timing-function: ease-in-out;
+}
+.jspHorizontalBar {
+	height: 0;
+	background: none;
+	-webkit-transition-property: height;
+	-webkit-transition-duration: 0.2s;
+	-webkit-transition-timing-function: ease-in-out;
+}
+.jspTrack {
+	background: none;
+	-webkit-transition-property: background-color;
+	-webkit-transition-duration: 0.2s;
+	-webkit-transition-timing-function: ease-in-out;
+}
+.jspDrag {
+	background: rgba(0, 0, 0, 0.3);
+	-webkit-transition-property: background-color;
+	-webkit-transition-duration: 0.2s;
+	-webkit-transition-timing-function: ease-in-out;
+	border-radius: 3px;
+}
+.jspTrack:hover {
+	background: rgba(0, 0, 0, 0.1)
+}
+.jspTrack:hover .jspDrag {
+	background: #0064cd;
+}
+.jspCorner {
+	background: none;
+}
+.container-fixed > aside:hover .jspVerticalBar {
+	width: 6px;
+}
+.container-fixed > aside:hover .jspHorizontalBar {
+	height: 6px;
+}
+.container-fixed > .content:hover .jspVerticalBar {
+	width: 6px;
+}
+.container-fixed > .content:hover .jspHorizontalBar {
+	height: 6px;
+}
+
+/* Select SVG overlay */
+
+#select-svg-overlay {
+	background: rgba(0,100,205,0.3);
+	display: none;
+	position: absolute;
+	z-index: 20000;
+	color: #fff;
+	font-size: 14px;
+	text-align: center;
+	cursor: pointer;
+}
+#select-svg-overlay > div {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	margin-top: -20px;
+}
+#select-svg-overlay span {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+/* Loading */
+
+.loader {
+	display: block;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	background: rgba(200, 200, 200, 0.3);
+}
+.dark .loader {
+	background: rgba(0, 0, 0, 0.3);
+}
+.loader .center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 10px;
+	width: 48px;
+	margin-top: -7px;
+	margin-left: -28px;
+	padding: 4px;
+	border-radius: 2px;
+	background: #cce0f5;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+.dark .loader .center {
+	background: rgba(0, 0, 0, 0.5);
+}
+.loader .col {
+	float: left;
+	height: 10px;
+	width: 3px;
+	background-color: #0064cd;
+	margin-left: 2px;
+	-webkit-animation-name: loader-animation;
+ 	-webkit-animation-duration: 2s;
+ 	-webkit-animation-iteration-count: infinite;
+ 	-webkit-animation-direction: linear;
+}
+.dark .loader .col {
+	-webkit-animation-name: loader-animation-dark;
+}
+.loader .col1 {
+	margin-left: 0;
+	-webkit-animation-delay: .1s;
+}
+.loader .col2 {
+	-webkit-animation-delay: .2s;
+}
+.loader .col3 {
+	-webkit-animation-delay: .3s;
+}
+.loader .col4 {
+	-webkit-animation-delay: .4s;
+}
+.loader .col5 {
+	-webkit-animation-delay: .5s;
+}
+.loader .col6 {
+	-webkit-animation-delay: .6s;
+}
+.loader .col7 {
+	-webkit-animation-delay: .7s;
+}
+.loader .col8 {
+	-webkit-animation-delay: .8s;
+}
+.loader .col9 {
+	-webkit-animation-delay: .9s;
+}
+.loader .col10 {
+	-webkit-animation-delay: 1s;
+}
+@-webkit-keyframes loader-animation {
+	20% { background-color: #fff; }
+	50% { background-color: #0064cd; }
+	80% { background-color: #fff; }
+}
+@-webkit-keyframes loader-animation-dark {
+	20% { background-color: #0064cd; }
+	50% { background-color: #fff; }
+	80% { background-color: #0064cd; }
+}
+
+/* Content */
+
+#footbar .timeline-view {
+	height: 90px;
+}
+#footbar .timeline-view .loader {
+	border-radius: 5px;
+}
+#footbar .timeline-view svg {
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	cursor: pointer;
+}
+#footbar .timeline-view .selection rect {
+	fill: rgba(0,0,0,0.3);
+}
+#footbar .timeline-view .bar line {
+  fill: none;
+  stroke-width: 1.5px;
+}
+#footbar .timeline-view text {
+	fill: #666;
+	font-size: 10px;
+}
+#footbar .timeline-view .axis line,
+#footbar .timeline-view .axis path {
+  	fill: none;
+  	stroke: #333;
+  	shape-rendering: crispEdges;
+}
+#footbar .timeline-view .axis .tick {
+	stroke: #333;
+}
+#footbar .timeline-view .axis .tick.minor {
+	stroke: #333;
+}
+
+/* Dashboard */
+
+.page-dashboard .bucket-chart {
+	position: relative;
+	margin-bottom: 10px;
+}
+.page-dashboard .bucket-chart .loader {
+	border-radius: 5px;
+}
+.page-dashboard .bucket-chart .bar line {
+  fill: none;
+  stroke-width: 1.5px;
+}
+.page-dashboard .bucket-chart text {
+	fill: #666;
+	font-size: 10px;
+}
+.page-dashboard .bucket-chart .axis line,
+.page-dashboard .bucket-chart .axis path {
+  	fill: none;
+  	stroke: #666;
+  	shape-rendering: crispEdges;
+}
+.page-dashboard .bucket-chart .axis .tick {
+	stroke: #ccc;
+}
+.page-dashboard .bucket-chart .axis .tick.minor {
+	stroke: #666;
+}
+.page-dashboard .donut-chart,
+.page-dashboard .donut-chart {
+	position: relative;
+	margin-bottom: 10px;
+}
+.page-dashboard .donut-chart text,
+.page-dashboard .donut-chart text {
+	fill: #666;
+	font-size: 10px;
+}
+
+/* Graph */
+
+.page-graph .canvas .node {
+	stroke: #333;
+	stroke-width: 1.5px;
+}
+.page-graph .canvas .link {
+  fill: none;
+  stroke-width: 1px;
+  stroke-opacity: .6;
+}
+
+/* Edge Bundle */
+
+.page-edge-bundle .canvas,
+.page-edge-bundle .canvas > div {
+	height: 100%;
+	overflow: hidden;
+	text-align: center;
+}
+.page-edge-bundle .canvas .link {
+  fill: none;
+  stroke-width: 1px;
+  stroke-opacity: .5;
+}
+.page-edge-bundle .canvas text {
+	fill: #ccc;
+	font-size: 9px;
+}
+
+/* Hive Plot */
+
+.page-hive-plot .canvas,
+.page-hive-plot .canvas > div {
+	height: 100%;
+	overflow: hidden;
+	text-align: center;
+}
+.page-hive-plot .canvas .axis line {
+	stroke: #efefef;
+	stroke-width: 3;
+}
+.page-hive-plot .canvas .axis text {
+	fill: #efefef;
+	font-size: 10;
+	dominant-baseline: middle;
+	text-anchor: middle;
+}
+.page-hive-plot .canvas .direction {
+    fill: none;
+    stroke: #888;
+    stroke-width: 2;
+}
+.page-hive-plot .canvas .link {
+  fill: none;
+  stroke-width: 1px;
+  stroke-opacity: .5;
+}
